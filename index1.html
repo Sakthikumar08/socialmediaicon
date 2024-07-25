@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PopUp Social Media Icons</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<style>
+ 
+ 
+.container{
+  display: grid;
+  grid-template-columns: auto auto auto auto auto auto auto;
+  height:280px;
+  justify-content: space-evenly;
+  padding: 250px;
+  align-content: center;
+  
+}
+.icon{
+  position: relative;
+  display: inline;
+  border-radius: 50%;
+  border: 0.2px solid black;
+  padding:15px;
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.1);
+
+}
+.icon .tooltip{
+  visibility: hidden;
+  padding: 5px 1px;
+  background-color: rgb(64, 62, 62);
+  color:aliceblue;
+  width:120px;
+  border-radius: 5px;
+  text-align: center;
+  opacity: 0;
+  transform: opacity 0.3s;
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -60px;
+
+}
+.icon:hover .tooltip{
+  visibility: visible;
+  opacity: 1;
+}
+
+.container .tooltip::before {
+  position: absolute;
+  content: '';
+  height: 8px;
+  width: 8px;
+  background-color: #ffffff;
+  bottom: -3px;
+  left: 50%;
+  transform: translate(-50%) rotate(45deg);
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.container .fb:hover ,
+.container .fb:hover .tooltip,
+.container .fb:hover .tooltip::before{
+  background-color:rgb(48, 113, 252) ;
+  border: 0.2px solid rgb(48, 113, 252);
+  color:white;
+}
+.container .in:hover ,
+.container .in:hover .tooltip,
+.container .in:hover .tooltip::before{
+  background-image:conic-gradient(rgb(185, 9, 138),rgb(237, 99, 57),orange,rgb(249, 225, 45),orange,rgb(237, 99, 57),rgb(186, 9, 139),rgb(139, 38, 148),rgb(186, 9, 139)) ;
+  border: 0;
+  color:white;
+}
+.container .tw:hover ,
+.container .tw:hover .tooltip,
+.container .tw:hover .tooltip::before{
+  background-color:rgb(10, 185, 239) ;
+  border: 0.2px solid rgb(10, 185, 239);
+  color:white;
+}
+.container .yt:hover ,
+.container .yt:hover .tooltip,
+.container .yt:hover .tooltip::before{
+  background-color:rgb(248, 35, 35) ;
+  border: 0.2px solid rgb(248, 35, 35);
+  color:white;
+}
+.container .gh:hover ,
+.container .gh:hover .tooltip,
+.container .gh:hover .tooltip::before{
+ background-image: linear-gradient(purple,rgb(41, 1, 54));
+ border: 0;
+  color:white;
+}
+.container .lk:hover ,
+.container .lk:hover .tooltip,
+.container .lk:hover .tooltip::before{
+  background-color:rgb(30, 68, 181) ;
+  border: 0.2px solid rgb(30, 68, 181);
+  color:white;
+}
+
+
+.container .tt:hover ,
+.container .tt:hover .tooltip,
+.container .tt:hover .tooltip::before{
+  background-color:rgb(0, 0, 0) ;
+  border: 1px solid linear-gradient(rgb(0, 217, 255),rgb(251, 67, 67));
+  
+  color:white;
+}
+
+
+</style>
+  </head>
+    <body>
+      <div class="container">
+
+      <div class="icon fb">
+      <div class="tooltip">Facebook</div>
+        <span><i class="fab fa-facebook-f"></i></span>
+      </div>
+    
+
+
+      <div class="icon in">
+        <div class="tooltip">Instagram</div>
+        <span><i class="fab fa-instagram"></i></span>
+      </div>
+    
+
+
+    <div class="icon yt">
+      <div class="tooltip">Youtube</div>
+      
+        <span><i class="fab fa-youtube"></i></span>
+        </div>
+      
+
+
+<div class="icon gh">
+  <div class="tooltip">Github</div>
+        <span><i class="fab fa-github"></i></span>
+      </div>
+   
+    <div class="icon tw">
+      <div class="tooltip">Twitter</div>
+    
+        <span><i class="fab fa-twitter"></i></span>
+      </div>
+    
+
+
+
+    <div class="icon lk">
+      <div class="tooltip">Linkedin</div>
+        <span><i class="fab fa-linkedin"></i></span>
+      </div>
+    
+
+
+
+    <div class="icon tt">
+      <div class="tooltip">Tiktok</div>
+        <span><i class="fab fa-tiktok"></i></span>
+      </div>
+    
+  </div>
+
+    </body>
+    </html>
